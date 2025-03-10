@@ -52,9 +52,8 @@ public class QaLegend_userstest extends Baseclass
 	@Test
 	public void createaUser() throws InterruptedException
 	{
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	loginpage.loginToQaLegend(prop.getProperty("username"),prop.getProperty("password"));
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	
 	homepage.endTourButtonClick();
 	homepage.clickOnUserManagementButton();
 	homepage.clickOnUserButton();
@@ -63,18 +62,15 @@ public class QaLegend_userstest extends Baseclass
 	String emailid=name+Fakerutility.getRandomNumber()+"@gmail.com";
 	String password="qwertyuiop";
 	userpage.addUser(name, emailid, password);
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	userpage.searchUser(name);
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	Assert.assertEquals(userpage.userNameFinder(), name);
 	
 	}
 	@Test
 public void deleteUser() throws InterruptedException
 {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
 		loginpage.loginToQaLegend(prop.getProperty("username"),prop.getProperty("password"));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		homepage.endTourButtonClick();
 		homepage.clickOnUserManagementButton();
 		homepage.clickOnUserButton();
@@ -83,22 +79,18 @@ public void deleteUser() throws InterruptedException
 		String emailid=name+Fakerutility.getRandomNumber()+"@gmail.com";
 		String password="qwertyuiop";
 		userpage.addUser(name, emailid, password);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		userpage.searchUser(name);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		userpage.deleteUser();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		userpage.searchUser(name);
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		Assert.assertEquals(userpage.getTableStatus(), "No matching records found");
 		
 }
 @Test
 public void editUser() throws InterruptedException
 {
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	
 	loginpage.loginToQaLegend(prop.getProperty("username"),prop.getProperty("password"));
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	
 	homepage.endTourButtonClick();
 	homepage.clickOnUserManagementButton();
 	homepage.clickOnUserButton();
@@ -107,14 +99,10 @@ public void editUser() throws InterruptedException
 	String emailid=name+Fakerutility.getRandomNumber()+"@gmail.com";
 	String password="qwertyuiop";
 	userpage.addUser(name, emailid, password);
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	userpage.searchUser(name);
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	String newname=Fakerutility.getFakeFirstName();
 	userpage.editUserFirstName(newname);
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	userpage.searchUser(newname);
-	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	Assert.assertEquals(userpage.firstNamevalueFinder(), newname);
 }
 	

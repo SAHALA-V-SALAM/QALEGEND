@@ -19,18 +19,18 @@
       <include name="deleteSalesCommissionAgents"></include>
       </methods>
       </class>-->
-      <class name="testscripts.QaLegend_supplierstest">
+      <!--<class name="testscripts.QaLegend_supplierstest">
       <methods>
-     <!-- <include name="createSupplier"></include>-->
+     <include name="createSupplier"></include>
       <include name="deleteSupplier"></include>
       </methods>
-      </class>
-      <!--<class name="testscripts.QaLegend_rolestest">
+      </class>-->
+      <class name="testscripts.QaLegend_rolestest">
       <methods>
      <include name="createRoleName"></include>
      <include name="deleteRoleName"></include>
       </methods>
-      </class>-->
+      </class>
       <!--<class name="testscripts.QaLegend_customerstest">
       <methods>
       <include name="createCustomer"></include>

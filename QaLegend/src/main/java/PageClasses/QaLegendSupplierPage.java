@@ -55,9 +55,10 @@ public class QaLegendSupplierPage
 	}
 	public void searchSupplier(	String suppliername)
 	{
+		Waitutilities.waitForElementtobeInvisible(driver, searchSupplierTextBox);
 		Pageutilities.clearText(searchSupplierTextBox);
 		searchSupplierTextBox.sendKeys(suppliername);
-		Waitutilities.waitForElementtobeInvisible(driver, searchSupplierTextBox);
+		
 	}
 	public String supplierNameFinder()
 	{
@@ -72,8 +73,9 @@ public class QaLegendSupplierPage
 		}
 	public void actionBtn()
 	{
+		Waitutilities.waitForClickingElement(driver, actionButton);
 		Pageutilities.clickOnAnElement(actionButton);
-		Waitutilities.waitForElementtobeInvisible(driver, actionButton);
+		
 	}
 	public String getSupplierTableStatus()
 	{

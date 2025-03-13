@@ -14,11 +14,18 @@ import PageClasses.QaLegendLoginPage;
 import PageClasses.QaLegendSupplierPage;
 import PageClasses.QaLegendUserPage;
 import Utilities.Fakerutility;
+import Utilities.retryAnalyzer;
 
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.KeyEvent;
 import java.io.FileInputStream;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class QaLegend_userstest extends Baseclass
@@ -33,9 +40,10 @@ public class QaLegend_userstest extends Baseclass
 	Properties prop;
 	FileInputStream fis;
 	@BeforeMethod
-	public void browserInitialization() throws Exception// camel casing
+	@Parameters("browser")
+	public void browserInitialization(String browsername) throws Exception// camel casing
 	{
-		driver=initializemethod("chrome");
+		driver=initializemethod(browsername);
 		prop=new Properties();
 		String path= System.getProperty("user.dir")+"\\src\\main\\resources\\TestData\\data.properties";//to get dynamic path
 		fis=new FileInputStream(path);
@@ -49,7 +57,7 @@ public class QaLegend_userstest extends Baseclass
 		
 		
 }
-	@Test
+	@Test(retryAnalyzer = retryAnalyzer.class,priority=1,groups= {"regression"})
 	public void createaUser() throws InterruptedException
 	{
 	loginpage.loginToQaLegend(prop.getProperty("username"),prop.getProperty("password"));
@@ -66,7 +74,8 @@ public class QaLegend_userstest extends Baseclass
 	Assert.assertEquals(userpage.userNameFinder(), name);
 	
 	}
-	@Test
+	
+	@Test(retryAnalyzer = retryAnalyzer.class,priority=2,groups= {"smoke"})
 public void deleteUser() throws InterruptedException
 {
 		
@@ -85,7 +94,7 @@ public void deleteUser() throws InterruptedException
 		Assert.assertEquals(userpage.getTableStatus(), "No matching records found");
 		
 }
-@Test
+@Test(retryAnalyzer = retryAnalyzer.class,priority=3)
 public void editUser() throws InterruptedException
 {
 	
@@ -105,9 +114,8 @@ public void editUser() throws InterruptedException
 	userpage.searchUser(newname);
 	Assert.assertEquals(userpage.firstNamevalueFinder(), newname);
 }
+
 	
-	
-		
 }
 
 

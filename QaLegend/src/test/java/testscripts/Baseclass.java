@@ -45,7 +45,7 @@ public void afterMethod(ITestResult itResult) throws IOException
 }
 	if(driver!=null)//if driver is not closed
 	{
-		//driver.quit();//new browser is opened 
+		driver.quit();//new browser is opened 
 	}
 }
 }

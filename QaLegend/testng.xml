@@ -3,35 +3,36 @@
 <listeners>
 <listener class-name="testscripts.Listeners"></listener>
 </listeners>
-  <test thread-count="5" name="Test">
+  <test thread-count="2" name="Test">
+   <parameter name="browser" value="edge"></parameter>
     <classes>
-     <!-- <class name="testscripts.QaLegend_userstest">
+    <class name="testscripts.QaLegend_userstest">
       <methods>
      <include name="createaUser"></include>
      <include name="deleteUser"></include>
      <include name="editUser"></include>
       
       </methods>
-      </class>-->
-    <!-- <class name="testscripts.QaLegend_salescommissionagentstest">
+      </class>
+     <!--<class name="testscripts.QaLegend_salescommissionagentstest">
       <methods>
       <include name="createSalesCommissionAgents"></include>
       <include name="deleteSalesCommissionAgents"></include>
       </methods>
       </class>-->
-      <!--<class name="testscripts.QaLegend_supplierstest">
+     <!-- <class name="testscripts.QaLegend_supplierstest">
       <methods>
      <include name="createSupplier"></include>
       <include name="deleteSupplier"></include>
       </methods>
       </class>-->
-      <class name="testscripts.QaLegend_rolestest">
+      <!--<class name="testscripts.QaLegend_rolestest">
       <methods>
      <include name="createRoleName"></include>
      <include name="deleteRoleName"></include>
       </methods>
       </class>
-      <!--<class name="testscripts.QaLegend_customerstest">
+      <class name="testscripts.QaLegend_customerstest">
       <methods>
       <include name="createCustomer"></include>
       </methods>

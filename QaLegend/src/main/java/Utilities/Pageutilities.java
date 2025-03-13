@@ -104,13 +104,13 @@ public static void acceptAlert(WebDriver driver)
 {
 	Alert alert=driver.switchTo().alert();
 	alert.accept();
-	//driver.switchTo().alert().accept();
+	
 }
 public static void dismissAlert(WebDriver driver)
 {
 	Alert alert=driver.switchTo().alert();
 	alert.dismiss();
-	//driver.switchTo().alert().accept();
+	
 }
 
 public static void clickOnAnElement(WebElement element) {

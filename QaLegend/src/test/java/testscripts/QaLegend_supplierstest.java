@@ -8,6 +8,7 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import Constants.Constants;
@@ -16,6 +17,7 @@ import PageClasses.QaLegendLoginPage;
 import PageClasses.QaLegendSupplierPage;
 import Utilities.ExcelUtilities;
 import Utilities.Fakerutility;
+import Utilities.retryAnalyzer;
 
 
 public class QaLegend_supplierstest extends Baseclass
@@ -27,9 +29,10 @@ public class QaLegend_supplierstest extends Baseclass
 	Properties prop;
 	FileInputStream fis;
 	@BeforeMethod
-	public void browserInitialization() throws Exception// camel casing
+	@Parameters("broswer")
+	public void browserInitialization(String browsername) throws Exception// camel casing
 	{
-		driver=initializemethod("chrome");
+		driver=initializemethod(browsername);
 		prop=new Properties();
 		String path= System.getProperty("user.dir")+"\\src\\main\\resources\\TestData\\data.properties";//to get dynamic path
 		fis=new FileInputStream(path);
@@ -42,7 +45,7 @@ public class QaLegend_supplierstest extends Baseclass
 		
 
 }
-	@Test
+	@Test(retryAnalyzer = retryAnalyzer.class,priority=4)
 	
 	public void createSupplier() throws InterruptedException, IOException
 	{
@@ -58,7 +61,7 @@ public class QaLegend_supplierstest extends Baseclass
 		supplierpage.searchSupplier(spname);
 		Assert.assertEquals(supplierpage.supplierNameFinder(), spname);
 	}
-	@Test
+	@Test(retryAnalyzer = retryAnalyzer.class,priority=5)
 	public void deleteSupplier() throws InterruptedException
 	{
 		loginpage.loginToQaLegend(prop.getProperty("username"),prop.getProperty("password"));

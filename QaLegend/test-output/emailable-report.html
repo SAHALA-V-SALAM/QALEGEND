@@ -9,14 +9,99 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">44,923</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">12</td><td class="num attn">3</td><td class="num">81</td><td>regression, smoke</td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testscripts.QaLegend_rolestest</td><td><a href="#m0">createRoleName</a></td><td rowspan="1">1741448380709</td><td rowspan="1">15603</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testscripts.QaLegend_rolestest</td><td><a href="#m1">deleteRoleName</a></td><td rowspan="1">1741448402078</td><td rowspan="1">16762</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">testscripts.QaLegend_userstest</td><td><a href="#m0">createaUser</a></td><td rowspan="1">1741694146787</td><td rowspan="1">2</td></tr><tr class="failedeven"><td><a href="#m1">deleteUser</a></td><td rowspan="1">1741694146804</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m2">editUser</a></td><td rowspan="1">1741694146815</td><td rowspan="1">1</td></tr><tr><th colspan="4">Test &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="12">testscripts.QaLegend_userstest</td><td><a href="#m3">createaUser</a></td><td rowspan="4">1741694146783</td><td rowspan="4">2</td></tr><tr class="retriedeven"><td><a href="#m4">createaUser</a></td></tr><tr class="retriedeven"><td><a href="#m5">createaUser</a></td></tr><tr class="retriedeven"><td><a href="#m6">createaUser</a></td></tr><tr class="retriedeven"><td><a href="#m7">deleteUser</a></td><td rowspan="4">1741694146798</td><td rowspan="4">2</td></tr><tr class="retriedeven"><td><a href="#m8">deleteUser</a></td></tr><tr class="retriedeven"><td><a href="#m9">deleteUser</a></td></tr><tr class="retriedeven"><td><a href="#m10">deleteUser</a></td></tr><tr class="retriedeven"><td><a href="#m11">editUser</a></td><td rowspan="4">1741694146807</td><td rowspan="4">1</td></tr><tr class="retriedeven"><td><a href="#m12">editUser</a></td></tr><tr class="retriedeven"><td><a href="#m13">editUser</a></td></tr><tr class="retriedeven"><td><a href="#m14">editUser</a></td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">testscripts.QaLegend_rolestest#createRoleName</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Tommie] but found [Tommie Edit  Delete]
-	at testscripts.QaLegend_rolestest.createRoleName(QaLegend_rolestest.java:53)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testscripts.QaLegend_rolestest#deleteRoleName</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">testscripts.QaLegend_userstest#createaUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null
+	at testscripts.QaLegend_userstest.createaUser(QaLegend_userstest.java:57)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testscripts.QaLegend_userstest#deleteUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null
+	at testscripts.QaLegend_userstest.deleteUser(QaLegend_userstest.java:76)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testscripts.QaLegend_userstest#editUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null
+	at testscripts.QaLegend_userstest.editUser(QaLegend_userstest.java:95)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testscripts.QaLegend_userstest#createaUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null
+	at testscripts.QaLegend_userstest.createaUser(QaLegend_userstest.java:57)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">testscripts.QaLegend_userstest#createaUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null
+	at testscripts.QaLegend_userstest.createaUser(QaLegend_userstest.java:57)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">testscripts.QaLegend_userstest#createaUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null
+	at testscripts.QaLegend_userstest.createaUser(QaLegend_userstest.java:57)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">testscripts.QaLegend_userstest#createaUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null
+	at testscripts.QaLegend_userstest.createaUser(QaLegend_userstest.java:57)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">testscripts.QaLegend_userstest#deleteUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null
+	at testscripts.QaLegend_userstest.deleteUser(QaLegend_userstest.java:76)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">testscripts.QaLegend_userstest#deleteUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null
+	at testscripts.QaLegend_userstest.deleteUser(QaLegend_userstest.java:76)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">testscripts.QaLegend_userstest#deleteUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null
+	at testscripts.QaLegend_userstest.deleteUser(QaLegend_userstest.java:76)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">testscripts.QaLegend_userstest#deleteUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null
+	at testscripts.QaLegend_userstest.deleteUser(QaLegend_userstest.java:76)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">testscripts.QaLegend_userstest#editUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null
+	at testscripts.QaLegend_userstest.editUser(QaLegend_userstest.java:95)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">testscripts.QaLegend_userstest#editUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null
+	at testscripts.QaLegend_userstest.editUser(QaLegend_userstest.java:95)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">testscripts.QaLegend_userstest#editUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null
+	at testscripts.QaLegend_userstest.editUser(QaLegend_userstest.java:95)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">testscripts.QaLegend_userstest#editUser</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;this.prop&quot; is null
+	at testscripts.QaLegend_userstest.editUser(QaLegend_userstest.java:95)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+... Removed 10 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

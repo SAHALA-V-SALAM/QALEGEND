@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utilities.Pageutilities;
+import Utilities.Waitutilities;
 
 public class QaLegendSalesCommissionAgentPage 
 {
@@ -52,11 +53,13 @@ public class QaLegendSalesCommissionAgentPage
 	}
 	public void searchSCAgent(String CAName)
 	{
+		Waitutilities.waitForElementtobeInvisible(driver,searchSCAgentTextBox);
 		Pageutilities.clearText(searchSCAgentTextBox);
 		searchSCAgentTextBox.sendKeys(CAName);
 	}
 	public QaLegendSalesCommissionAgentPage deleteSCAgent()
 	{
+		Waitutilities.waitForClickingElement(driver, SCAgentDeleteButton);
 		Pageutilities.ClickOnAnElement(SCAgentDeleteButton);
 		Pageutilities.ClickOnAnElement(deleteConfirmationButton);
 		return this;

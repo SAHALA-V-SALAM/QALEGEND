@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+<listeners>
+<listener class-name="testscripts.Listeners"></listener>
+</listeners>
+  <test thread-count="2" name="Test" parallel="methods">
+   <parameter name="browser" value="edge"></parameter>
+    <classes>
+     <class name="testscripts.QaLegend_userstest">
+      <methods>
+     <include name="createaUser"></include>
+     <include name="deleteUser"></include>
+     <include name="editUser"></include>
+      
+      </methods>
+      </class>
+     <!--<class name="testscripts.QaLegend_salescommissionagentstest">
+      <methods>
+      <include name="createSalesCommissionAgents"></include>
+      <include name="deleteSalesCommissionAgents"></include>
+      </methods>
+      </class>-->
+     <!-- <class name="testscripts.QaLegend_supplierstest">
+      <methods>
+     <include name="createSupplier"></include>
+      <include name="deleteSupplier"></include>
+      </methods>
+      </class>-->
+      <!--<class name="testscripts.QaLegend_rolestest">
+      <methods>
+     <include name="createRoleName"></include>
+     <include name="deleteRoleName"></include>
+      </methods>
+      </class>
+      <class name="testscripts.QaLegend_customerstest">
+      <methods>
+      <include name="createCustomer"></include>
+      </methods>
+      </class>-->
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

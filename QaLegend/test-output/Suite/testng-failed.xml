@@ -4,15 +4,22 @@
   <listeners>
     <listener class-name="testscripts.Listeners"/>
   </listeners>
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" parallel="classes" name="Test(failed)">
+    <parameter name="browser" value="edge"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+        <include name="regression"/>
+      </run>
+    </groups>
     <classes>
-      <class name="testscripts.QaLegend_rolestest">
+      <class name="testscripts.QaLegend_userstest">
         <methods>
-          <include name="browserInitialization"/>
-          <include name="afterMethod"/>
-          <include name="createRoleName"/>
+          <include name="deleteUser"/>
+          <include name="editUser"/>
+          <include name="createaUser"/>
         </methods>
-      </class> <!-- testscripts.QaLegend_rolestest -->
+      </class> <!-- testscripts.QaLegend_userstest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

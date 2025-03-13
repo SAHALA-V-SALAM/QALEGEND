@@ -7,12 +7,14 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import PageClasses.QaLegendHomePage;
 import PageClasses.QaLegendLoginPage;
 import PageClasses.QaLegendRolePage;
 import Utilities.Fakerutility;
+import Utilities.retryAnalyzer;
 
 public class QaLegend_rolestest extends Baseclass
 {
@@ -23,9 +25,10 @@ public class QaLegend_rolestest extends Baseclass
 	Properties prop;
 	FileInputStream fis;
 	@BeforeMethod
-	public void browserInitialization() throws Exception// camel casing
+	@Parameters("browser")
+	public void browserInitialization(String browsername) throws Exception// camel casing
 	{
-		driver=initializemethod("chrome");
+		driver=initializemethod(browsername);
 		prop=new Properties();
 		String path= System.getProperty("user.dir")+"\\src\\main\\resources\\TestData\\data.properties";//to get dynamic path
 		fis=new FileInputStream(path);
@@ -38,7 +41,7 @@ public class QaLegend_rolestest extends Baseclass
 		
 
 }
-	@Test
+	@Test(retryAnalyzer = retryAnalyzer.class,priority=8, groups={"smoke"})
 	public void createRoleName() throws InterruptedException 
 	{
 		
@@ -52,7 +55,7 @@ public class QaLegend_rolestest extends Baseclass
 		rolepage.searchRole(rolename);
 		Assert.assertEquals(rolepage.roleNameFinder(), rolename);
 	}
-	@Test
+	@Test(retryAnalyzer = retryAnalyzer.class,priority=9, groups={"smoke"})
     public void deleteRoleName() throws InterruptedException
     {
 	

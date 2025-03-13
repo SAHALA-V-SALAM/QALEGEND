@@ -7,12 +7,16 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
+import com.beust.jcommander.Parameter;
 
 import PageClasses.QaLegendCustomerPage;
 import PageClasses.QaLegendHomePage;
 import PageClasses.QaLegendLoginPage;
 import Utilities.Fakerutility;
+import Utilities.retryAnalyzer;
 
 public class QaLegend_customerstest extends Baseclass
 
@@ -23,10 +27,11 @@ public class QaLegend_customerstest extends Baseclass
 	QaLegendCustomerPage customerpage;
 	Properties prop;
 	FileInputStream fis;
-	@BeforeMethod
-	public void browserInitialization() throws Exception// camel casing
+	@BeforeMethod(groups= {"smoke","regression"})
+	@Parameters({"browser"})
+	public void browserInitialization(String browsername) throws Exception// camel casing
 	{
-		driver=initializemethod("chrome");
+		driver=initializemethod(browsername);
 		prop=new Properties();
 		String path= System.getProperty("user.dir")+"\\src\\main\\resources\\TestData\\data.properties";//to get dynamic path
 		fis=new FileInputStream(path);
@@ -37,7 +42,7 @@ public class QaLegend_customerstest extends Baseclass
 		homepage=new QaLegendHomePage(driver);
 		customerpage=new QaLegendCustomerPage(driver);
 	}
-@Test
+@Test(retryAnalyzer = retryAnalyzer.class, priority=10) 
 public void createCustomer() throws InterruptedException
 {
 	
@@ -50,9 +55,9 @@ public void createCustomer() throws InterruptedException
 	int mobileno=Fakerutility.getRandomNumber();
 	int contactid=Fakerutility.getRandomNumber();
 	customerpage.addCustomer(name, mobileno, contactid);
-	Thread.sleep(3000);
+	
 	customerpage.searchCustomer(name);
-	Thread.sleep(3000);
+	
 	Assert.assertEquals(customerpage.customerNameFinder(), name);
 }
 }

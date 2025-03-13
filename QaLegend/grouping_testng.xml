@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+<listeners>
+<listener class-name="testscripts.Listeners"></listener>
+</listeners>
+  <test thread-count="2" name="Test">
+   <parameter name="browser" value="edge"></parameter>
+   <groups>
+   <run>
+   <include name="smoke"></include>
+   <include name="regression"></include>
+   </run>
+   </groups>
+    <classes>
+     <class name="testscripts.QaLegend_userstest">
+     
+      </class>
+     <!--<class name="testscripts.QaLegend_salescommissionagentstest">
+     
+      </class>-->
+     <!-- <class name="testscripts.QaLegend_supplierstest">
+     
+      </class>-->
+      <!--<class name="testscripts.QaLegend_rolestest">
+     
+      </class>
+      <class name="testscripts.QaLegend_customerstest">
+      
+      </class>-->
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

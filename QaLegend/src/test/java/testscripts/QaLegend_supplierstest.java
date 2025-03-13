@@ -17,7 +17,8 @@ import PageClasses.QaLegendLoginPage;
 import PageClasses.QaLegendSupplierPage;
 import Utilities.ExcelUtilities;
 import Utilities.Fakerutility;
-import Utilities.retryAnalyzer;
+import Utilities.RetryAnalyzer;
+
 
 
 public class QaLegend_supplierstest extends Baseclass
@@ -45,7 +46,7 @@ public class QaLegend_supplierstest extends Baseclass
 		
 
 }
-	@Test(retryAnalyzer = retryAnalyzer.class,priority=4)
+	@Test(retryAnalyzer = RetryAnalyzer.class,priority=4)
 	
 	public void createSupplier() throws InterruptedException, IOException
 	{
@@ -61,7 +62,7 @@ public class QaLegend_supplierstest extends Baseclass
 		supplierpage.searchSupplier(spname);
 		Assert.assertEquals(supplierpage.supplierNameFinder(), spname);
 	}
-	@Test(retryAnalyzer = retryAnalyzer.class,priority=5)
+	@Test(retryAnalyzer = RetryAnalyzer.class,priority=5)
 	public void deleteSupplier() throws InterruptedException
 	{
 		loginpage.loginToQaLegend(prop.getProperty("username"),prop.getProperty("password"));

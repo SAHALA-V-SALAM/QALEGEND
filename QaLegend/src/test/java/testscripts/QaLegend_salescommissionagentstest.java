@@ -16,7 +16,8 @@ import PageClasses.QaLegendSalesCommissionAgentPage;
 import PageClasses.QaLegendSupplierPage;
 import PageClasses.QaLegendUserPage;
 import Utilities.Fakerutility;
-import Utilities.retryAnalyzer;
+import Utilities.RetryAnalyzer;
+
 
 public class QaLegend_salescommissionagentstest extends Baseclass
 {
@@ -43,7 +44,7 @@ public class QaLegend_salescommissionagentstest extends Baseclass
 		
 	}
 	
-	@Test(retryAnalyzer = retryAnalyzer.class,priority=6)
+	@Test(retryAnalyzer = RetryAnalyzer.class,priority=6)
 	public void createSalesCommissionAgents() throws InterruptedException
 	{
 		
@@ -59,7 +60,7 @@ public class QaLegend_salescommissionagentstest extends Baseclass
 		Assert.assertEquals(salescommissionagentpage.SCNameFinder(), SCName);
 		
 	}
-	@Test(retryAnalyzer=retryAnalyzer.class,priority=7)
+	@Test(retryAnalyzer=RetryAnalyzer.class,priority=7)
 	public void deleteSalesCommissionAgents() throws InterruptedException
 	{
 		

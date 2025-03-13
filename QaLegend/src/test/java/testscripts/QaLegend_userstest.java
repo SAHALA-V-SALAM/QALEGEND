@@ -14,7 +14,7 @@ import PageClasses.QaLegendLoginPage;
 import PageClasses.QaLegendSupplierPage;
 import PageClasses.QaLegendUserPage;
 import Utilities.Fakerutility;
-import Utilities.retryAnalyzer;
+import Utilities.RetryAnalyzer;
 
 import java.awt.AWTException;
 import java.awt.Robot;
@@ -57,7 +57,7 @@ public class QaLegend_userstest extends Baseclass
 		
 		
 }
-	@Test(retryAnalyzer = retryAnalyzer.class,priority=1,groups= {"regression"})
+	@Test(retryAnalyzer = RetryAnalyzer.class,priority=1)
 	public void createaUser() throws InterruptedException
 	{
 	loginpage.loginToQaLegend(prop.getProperty("username"),prop.getProperty("password"));
@@ -75,7 +75,7 @@ public class QaLegend_userstest extends Baseclass
 	
 	}
 	
-	@Test(retryAnalyzer = retryAnalyzer.class,priority=2,groups= {"smoke"})
+	@Test(retryAnalyzer = RetryAnalyzer.class,priority=2)
 public void deleteUser() throws InterruptedException
 {
 		
@@ -94,7 +94,7 @@ public void deleteUser() throws InterruptedException
 		Assert.assertEquals(userpage.getTableStatus(), "No matching records found");
 		
 }
-@Test(retryAnalyzer = retryAnalyzer.class,priority=3)
+@Test(retryAnalyzer = RetryAnalyzer.class,priority=3)
 public void editUser() throws InterruptedException
 {
 	

@@ -14,7 +14,8 @@ import PageClasses.QaLegendHomePage;
 import PageClasses.QaLegendLoginPage;
 import PageClasses.QaLegendRolePage;
 import Utilities.Fakerutility;
-import Utilities.retryAnalyzer;
+import Utilities.RetryAnalyzer;
+
 
 public class QaLegend_rolestest extends Baseclass
 {
@@ -41,7 +42,7 @@ public class QaLegend_rolestest extends Baseclass
 		
 
 }
-	@Test(retryAnalyzer = retryAnalyzer.class,priority=8, groups={"smoke"})
+	@Test(retryAnalyzer = RetryAnalyzer.class,priority=8, groups={"smoke"})
 	public void createRoleName() throws InterruptedException 
 	{
 		
@@ -55,7 +56,7 @@ public class QaLegend_rolestest extends Baseclass
 		rolepage.searchRole(rolename);
 		Assert.assertEquals(rolepage.roleNameFinder(), rolename);
 	}
-	@Test(retryAnalyzer = retryAnalyzer.class,priority=9, groups={"smoke"})
+	@Test(retryAnalyzer = RetryAnalyzer.class,priority=9, groups={"smoke"})
     public void deleteRoleName() throws InterruptedException
     {
 	

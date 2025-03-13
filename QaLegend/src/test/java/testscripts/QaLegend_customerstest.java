@@ -16,7 +16,8 @@ import PageClasses.QaLegendCustomerPage;
 import PageClasses.QaLegendHomePage;
 import PageClasses.QaLegendLoginPage;
 import Utilities.Fakerutility;
-import Utilities.retryAnalyzer;
+import Utilities.RetryAnalyzer;
+
 
 public class QaLegend_customerstest extends Baseclass
 
@@ -42,7 +43,7 @@ public class QaLegend_customerstest extends Baseclass
 		homepage=new QaLegendHomePage(driver);
 		customerpage=new QaLegendCustomerPage(driver);
 	}
-@Test(retryAnalyzer = retryAnalyzer.class, priority=10) 
+@Test(retryAnalyzer = RetryAnalyzer.class, priority=10) 
 public void createCustomer() throws InterruptedException
 {
 	

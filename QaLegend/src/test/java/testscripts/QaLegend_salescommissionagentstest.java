@@ -27,7 +27,7 @@ public class QaLegend_salescommissionagentstest extends Baseclass
 	QaLegendSalesCommissionAgentPage salescommissionagentpage;
 	Properties prop;
 	FileInputStream fis;
-	@BeforeMethod
+	@BeforeMethod(groups= {"smoke","regression"})
 	@Parameters("browser")
 	public void browserInitialization(String browsername) throws Exception// camel casing
 	{
@@ -44,7 +44,7 @@ public class QaLegend_salescommissionagentstest extends Baseclass
 		
 	}
 	
-	@Test(retryAnalyzer = RetryAnalyzer.class,priority=6)
+	@Test(retryAnalyzer = RetryAnalyzer.class,priority=6,groups= {"regression"})
 	public void createSalesCommissionAgents() throws InterruptedException
 	{
 		

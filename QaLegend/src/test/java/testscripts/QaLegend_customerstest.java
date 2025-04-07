@@ -43,7 +43,7 @@ public class QaLegend_customerstest extends Baseclass
 		homepage=new QaLegendHomePage(driver);
 		customerpage=new QaLegendCustomerPage(driver);
 	}
-@Test(retryAnalyzer = RetryAnalyzer.class, priority=10) 
+@Test(retryAnalyzer = RetryAnalyzer.class, priority=10,groups= {"smoke"}) 
 public void createCustomer() throws InterruptedException
 {
 	

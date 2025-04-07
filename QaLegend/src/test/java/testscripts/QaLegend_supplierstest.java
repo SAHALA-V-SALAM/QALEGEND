@@ -29,7 +29,7 @@ public class QaLegend_supplierstest extends Baseclass
 	QaLegendSupplierPage supplierpage;
 	Properties prop;
 	FileInputStream fis;
-	@BeforeMethod
+	@BeforeMethod(groups= {"smoke","regression"})
 	@Parameters("broswer")
 	public void browserInitialization(String browsername) throws Exception// camel casing
 	{
@@ -62,7 +62,7 @@ public class QaLegend_supplierstest extends Baseclass
 		supplierpage.searchSupplier(spname);
 		Assert.assertEquals(supplierpage.supplierNameFinder(), spname);
 	}
-	@Test(retryAnalyzer = RetryAnalyzer.class,priority=5)
+	@Test(retryAnalyzer = RetryAnalyzer.class,priority=5,groups= {"smoke"})
 	public void deleteSupplier() throws InterruptedException
 	{
 		loginpage.loginToQaLegend(prop.getProperty("username"),prop.getProperty("password"));

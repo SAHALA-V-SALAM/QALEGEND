@@ -25,7 +25,7 @@ public class QaLegend_rolestest extends Baseclass
 	QaLegendRolePage rolepage;
 	Properties prop;
 	FileInputStream fis;
-	@BeforeMethod
+	@BeforeMethod(groups= {"smoke","regression"})
 	@Parameters("browser")
 	public void browserInitialization(String browsername) throws Exception// camel casing
 	{

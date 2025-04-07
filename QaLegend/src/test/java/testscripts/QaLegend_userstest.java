@@ -39,7 +39,7 @@ public class QaLegend_userstest extends Baseclass
 
 	Properties prop;
 	FileInputStream fis;
-	@BeforeMethod
+	@BeforeMethod(groups= {"smoke","regression"})
 	@Parameters("browser")
 	public void browserInitialization(String browsername) throws Exception// camel casing
 	{
@@ -57,7 +57,7 @@ public class QaLegend_userstest extends Baseclass
 		
 		
 }
-	@Test(retryAnalyzer = RetryAnalyzer.class,priority=1)
+	@Test(retryAnalyzer = RetryAnalyzer.class,priority=1,groups= {"regression"})
 	public void createaUser() throws InterruptedException
 	{
 	loginpage.loginToQaLegend(prop.getProperty("username"),prop.getProperty("password"));
